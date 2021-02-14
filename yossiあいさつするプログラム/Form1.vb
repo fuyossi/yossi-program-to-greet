@@ -201,7 +201,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("5") And dtNow.Hour < CInt("10") Then
+        ElseIf dtNow.Hour >= 5 And dtNow.Hour < 10 Then
             get_nowtimetype = "おはようございます"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -220,7 +220,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("10") And dtNow.Hour < CInt("17") Then
+        ElseIf dtNow.Hour >= 10 And dtNow.Hour < 17 Then
             get_nowtimetype = "こんにちは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -239,7 +239,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("17") And dtNow.Hour < CInt("25") Then
+        ElseIf dtNow.Hour >= 17 And dtNow.Hour < 25 Then
             get_nowtimetype = "こんばんは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -258,7 +258,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("0") And dtNow.Hour < CInt("5") Then
+        ElseIf dtNow.Hour >= 0 And dtNow.Hour < 5 Then
             get_nowtimetype = "こんばんは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -314,7 +314,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("5") And dtNow.Hour < CInt("10") Then
+        ElseIf dtNow.Hour >= 5 And dtNow.Hour < 10 Then
             get_nowtimetype = "おはようございます"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -333,7 +333,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("10") And dtNow.Hour < CInt("17") Then
+        ElseIf dtNow.Hour >= 10 And dtNow.Hour < 17 Then
             get_nowtimetype = "こんにちは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -352,7 +352,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("17") And dtNow.Hour < CInt("25") Then
+        ElseIf dtNow.Hour >= 17 And dtNow.Hour < 25 Then
             get_nowtimetype = "こんばんは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
@@ -371,7 +371,7 @@ Public Class Form1
                 'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
                 Application.Exit()
             End If
-        ElseIf dtNow.Hour >= CInt("0") And dtNow.Hour < CInt("5") Then
+        ElseIf dtNow.Hour >= 0 And dtNow.Hour < 5 Then
             get_nowtimetype = "こんばんは"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
