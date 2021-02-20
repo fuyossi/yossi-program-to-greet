@@ -7,12 +7,33 @@ Public Class Form4
         Else
             CheckBox1.Checked = False
         End If
+        If My.Settings.darkmode = "True" Then
+            CheckBox2.Checked = True
+        Else
+            CheckBox2.Checked = False
+        End If
         NumericUpDown1.Value = My.Settings.alarm11
         NumericUpDown2.Value = My.Settings.alarm12
         NumericUpDown3.Value = My.Settings.alarm21
         NumericUpDown4.Value = My.Settings.alarm22
         NumericUpDown5.Value = My.Settings.alarm31
         NumericUpDown6.Value = My.Settings.alarm32
+        If My.Settings.darkmode = "True" Then
+            Me.BackColor = Color.Black
+            Label1.BackColor = Color.White
+            Label2.BackColor = Color.White
+            Label3.BackColor = Color.White
+            Label4.BackColor = Color.White
+            Label5.BackColor = Color.White
+            Label6.BackColor = Color.White
+            Label7.BackColor = Color.White
+            Label8.BackColor = Color.White
+            Label9.BackColor = Color.White
+            CheckBox1.BackColor = Color.White
+            CheckBox2.BackColor = Color.White
+        Else
+            Me.BackColor = Color.White
+        End If
     End Sub
     Public Class SampleClass
         Public Number As Integer
@@ -24,59 +45,65 @@ Public Class Form4
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim iserror As Integer, iserror2 As Integer, iserror3 As Integer, iserror4 As Integer, iserror5 As Integer, iserror6 As Integer, iserror7 As Integer
+        Dim iserror As Integer, iserror2 As Integer, iserror3 As Integer, iserror4 As Integer, iserror5 As Integer, iserror6 As Integer, iserror7 As Integer, iserror8 As Integer
         If CheckBox1.Checked = True Then
             My.Settings.shownotification = "True"
-            'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
             iserror = 0
         Else
             My.Settings.shownotification = "False"
-            'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
             iserror = 0
+        End If
+        If CheckBox2.Checked = True Then
+            My.Settings.darkmode = "True"
+            iserror2 = 0
+        Else
+            My.Settings.darkmode = "False"
+            iserror2 = 0
         End If
         If NumericUpDown1.Value > 24 Or NumericUpDown1.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror2 = 1
+            iserror3 = 1
         Else
             My.Settings.alarm11 = CInt(NumericUpDown1.Value)
-            iserror2 = 0
+            iserror3 = 0
         End If
         If NumericUpDown2.Value > 59 Or NumericUpDown2.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror3 = 1
+            iserror4 = 1
         Else
             My.Settings.alarm12 = CInt(NumericUpDown2.Value)
-            iserror3 = 0
+            iserror4 = 0
         End If
         If NumericUpDown3.Value > 24 Or NumericUpDown3.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror4 = 1
+            iserror5 = 1
         Else
             My.Settings.alarm21 = CInt(NumericUpDown3.Value)
-            iserror4 = 0
+            iserror5 = 0
         End If
         If NumericUpDown4.Value > 59 Or NumericUpDown4.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror5 = 1
+            iserror6 = 1
         Else
             My.Settings.alarm22 = CInt(NumericUpDown4.Value)
-            iserror5 = 0
+            iserror6 = 0
         End If
         If NumericUpDown5.Value > 24 Or NumericUpDown5.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror6 = 1
+            iserror7 = 1
         Else
             My.Settings.alarm31 = CInt(NumericUpDown5.Value)
-            iserror6 = 0
+            iserror7 = 0
         End If
         If NumericUpDown6.Value > 59 Or NumericUpDown6.Value < 0 Then
             MsgBox("エラー：値は1から24の範囲内にしてください。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-            iserror7 = 1
+            iserror8 = 1
         Else
             My.Settings.alarm32 = CInt(NumericUpDown6.Value)
-            iserror7 = 0
+            iserror8 = 0
         End If
-        If iserror = 0 And iserror2 = 0 And iserror3 = 0 And iserror4 = 0 And iserror5 = 0 And iserror6 = 0 And iserror7 = 0 Then
+        If iserror = 0 And iserror2 = 0 And iserror3 = 0 And iserror4 = 0 And iserror5 = 0 And iserror6 = 0 And iserror7 = 0 And iserror8 = 0 Then
+            'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
             Me.Dispose()
         End If
     End Sub

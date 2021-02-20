@@ -36,7 +36,6 @@ Partial Class Form2
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.終了XToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ヘルプHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ヘルプHToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.オンラインヘルプOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ウェブサイト関係WToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,9 +60,10 @@ Partial Class Form2
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.AutoSize = True
-        Me.Button1.Location = New System.Drawing.Point(100, 350)
+        Me.Button1.Location = New System.Drawing.Point(118, 400)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 70)
+        Me.Button1.Size = New System.Drawing.Size(236, 80)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "前のウィンドウに戻る"
         Me.Button1.UseVisualStyleBackColor = True
@@ -72,9 +72,10 @@ Partial Class Form2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.AutoSize = True
-        Me.Button2.Location = New System.Drawing.Point(500, 350)
+        Me.Button2.Location = New System.Drawing.Point(591, 400)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(200, 70)
+        Me.Button2.Size = New System.Drawing.Size(236, 80)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "閉じる"
         Me.Button2.UseVisualStyleBackColor = True
@@ -82,9 +83,10 @@ Partial Class Form2
         'Button3
         '
         Me.Button3.AutoSize = True
-        Me.Button3.Location = New System.Drawing.Point(50, 125)
+        Me.Button3.Location = New System.Drawing.Point(59, 143)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(200, 100)
+        Me.Button3.Size = New System.Drawing.Size(236, 114)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "おはようございます"
         Me.Button3.UseVisualStyleBackColor = True
@@ -93,9 +95,10 @@ Partial Class Form2
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(181, 50)
+        Me.Label1.Location = New System.Drawing.Point(214, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(439, 21)
+        Me.Label1.Size = New System.Drawing.Size(499, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "あいさつをしてみましょう(今の時間帯は無視されます)"
         '
@@ -103,9 +106,10 @@ Partial Class Form2
         '
         Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button4.AutoSize = True
-        Me.Button4.Location = New System.Drawing.Point(300, 125)
+        Me.Button4.Location = New System.Drawing.Point(355, 143)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(200, 100)
+        Me.Button4.Size = New System.Drawing.Size(236, 114)
         Me.Button4.TabIndex = 4
         Me.Button4.Text = "こんにちは"
         Me.Button4.UseVisualStyleBackColor = True
@@ -114,9 +118,10 @@ Partial Class Form2
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button5.AutoSize = True
-        Me.Button5.Location = New System.Drawing.Point(550, 125)
+        Me.Button5.Location = New System.Drawing.Point(650, 143)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(200, 100)
+        Me.Button5.Size = New System.Drawing.Size(236, 114)
         Me.Button5.TabIndex = 5
         Me.Button5.Text = "こんばんは"
         Me.Button5.UseVisualStyleBackColor = True
@@ -128,7 +133,8 @@ Partial Class Form2
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ファイルFToolStripMenuItem, Me.ヘルプHToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 38)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(945, 40)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -136,94 +142,87 @@ Partial Class Form2
         '
         Me.ファイルFToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.新規あいさつNToolStripMenuItem, Me.ToolStripMenuItem1, Me.終了XToolStripMenuItem})
         Me.ファイルFToolStripMenuItem.Name = "ファイルFToolStripMenuItem"
-        Me.ファイルFToolStripMenuItem.Size = New System.Drawing.Size(112, 34)
+        Me.ファイルFToolStripMenuItem.Size = New System.Drawing.Size(129, 36)
         Me.ファイルFToolStripMenuItem.Text = "ファイル(&F)"
         '
         '新規あいさつNToolStripMenuItem
         '
         Me.新規あいさつNToolStripMenuItem.Name = "新規あいさつNToolStripMenuItem"
         Me.新規あいさつNToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.新規あいさつNToolStripMenuItem.Size = New System.Drawing.Size(355, 40)
+        Me.新規あいさつNToolStripMenuItem.Size = New System.Drawing.Size(405, 44)
         Me.新規あいさつNToolStripMenuItem.Text = "新規あいさつ(&N)..."
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(352, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(402, 6)
         '
         '終了XToolStripMenuItem
         '
         Me.終了XToolStripMenuItem.Name = "終了XToolStripMenuItem"
-        Me.終了XToolStripMenuItem.Size = New System.Drawing.Size(355, 40)
+        Me.終了XToolStripMenuItem.Size = New System.Drawing.Size(405, 44)
         Me.終了XToolStripMenuItem.Text = "終了(&X)"
         '
         'ヘルプHToolStripMenuItem
         '
-        Me.ヘルプHToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ヘルプHToolStripMenuItem1, Me.オンラインヘルプOToolStripMenuItem, Me.ToolStripMenuItem2, Me.ウェブサイト関係WToolStripMenuItem, Me.ToolStripMenuItem3, Me.アップデートを確認UToolStripMenuItem, Me.ToolStripMenuItem4, Me.YossiあいさつするプログラムについてAToolStripMenuItem})
+        Me.ヘルプHToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.オンラインヘルプOToolStripMenuItem, Me.ToolStripMenuItem2, Me.ウェブサイト関係WToolStripMenuItem, Me.ToolStripMenuItem3, Me.アップデートを確認UToolStripMenuItem, Me.ToolStripMenuItem4, Me.YossiあいさつするプログラムについてAToolStripMenuItem})
         Me.ヘルプHToolStripMenuItem.Name = "ヘルプHToolStripMenuItem"
-        Me.ヘルプHToolStripMenuItem.Size = New System.Drawing.Size(108, 34)
+        Me.ヘルプHToolStripMenuItem.Size = New System.Drawing.Size(124, 36)
         Me.ヘルプHToolStripMenuItem.Text = "ヘルプ(&H)"
-        '
-        'ヘルプHToolStripMenuItem1
-        '
-        Me.ヘルプHToolStripMenuItem1.Name = "ヘルプHToolStripMenuItem1"
-        Me.ヘルプHToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.ヘルプHToolStripMenuItem1.Size = New System.Drawing.Size(457, 40)
-        Me.ヘルプHToolStripMenuItem1.Text = "ヘルプ(&H)..."
         '
         'オンラインヘルプOToolStripMenuItem
         '
         Me.オンラインヘルプOToolStripMenuItem.Name = "オンラインヘルプOToolStripMenuItem"
-        Me.オンラインヘルプOToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Shift Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.オンラインヘルプOToolStripMenuItem.Size = New System.Drawing.Size(457, 40)
+        Me.オンラインヘルプOToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.オンラインヘルプOToolStripMenuItem.Size = New System.Drawing.Size(524, 44)
         Me.オンラインヘルプOToolStripMenuItem.Text = "オンラインヘルプ(&O)..."
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(454, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(521, 6)
         '
         'ウェブサイト関係WToolStripMenuItem
         '
         Me.ウェブサイト関係WToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YossiあいさつするプログラムのウェブサイトWToolStripMenuItem, Me.TankHToolStripMenuItem})
         Me.ウェブサイト関係WToolStripMenuItem.Name = "ウェブサイト関係WToolStripMenuItem"
-        Me.ウェブサイト関係WToolStripMenuItem.Size = New System.Drawing.Size(457, 40)
+        Me.ウェブサイト関係WToolStripMenuItem.Size = New System.Drawing.Size(524, 44)
         Me.ウェブサイト関係WToolStripMenuItem.Text = "ウェブサイト関係(&W)"
         '
         'YossiあいさつするプログラムのウェブサイトWToolStripMenuItem
         '
         Me.YossiあいさつするプログラムのウェブサイトWToolStripMenuItem.Name = "YossiあいさつするプログラムのウェブサイトWToolStripMenuItem"
-        Me.YossiあいさつするプログラムのウェブサイトWToolStripMenuItem.Size = New System.Drawing.Size(506, 40)
+        Me.YossiあいさつするプログラムのウェブサイトWToolStripMenuItem.Size = New System.Drawing.Size(579, 44)
         Me.YossiあいさつするプログラムのウェブサイトWToolStripMenuItem.Text = "yossiあいさつするプログラムのウェブサイト(&W)..."
         '
         'TankHToolStripMenuItem
         '
         Me.TankHToolStripMenuItem.Name = "TankHToolStripMenuItem"
-        Me.TankHToolStripMenuItem.Size = New System.Drawing.Size(506, 40)
+        Me.TankHToolStripMenuItem.Size = New System.Drawing.Size(579, 44)
         Me.TankHToolStripMenuItem.Text = "tank(&H)..."
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(454, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(521, 6)
         '
         'アップデートを確認UToolStripMenuItem
         '
         Me.アップデートを確認UToolStripMenuItem.Name = "アップデートを確認UToolStripMenuItem"
         Me.アップデートを確認UToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.F9), System.Windows.Forms.Keys)
-        Me.アップデートを確認UToolStripMenuItem.Size = New System.Drawing.Size(457, 40)
+        Me.アップデートを確認UToolStripMenuItem.Size = New System.Drawing.Size(524, 44)
         Me.アップデートを確認UToolStripMenuItem.Text = "アップデートを確認(&U)..."
         '
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(454, 6)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(521, 6)
         '
         'YossiあいさつするプログラムについてAToolStripMenuItem
         '
         Me.YossiあいさつするプログラムについてAToolStripMenuItem.Name = "YossiあいさつするプログラムについてAToolStripMenuItem"
-        Me.YossiあいさつするプログラムについてAToolStripMenuItem.Size = New System.Drawing.Size(457, 40)
+        Me.YossiあいさつするプログラムについてAToolStripMenuItem.Size = New System.Drawing.Size(524, 44)
         Me.YossiあいさつするプログラムについてAToolStripMenuItem.Text = "yossiあいさつするプログラムについて(&A)..."
         '
         'NotifyIcon1
@@ -238,42 +237,42 @@ Partial Class Form2
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.アプリケーションを開くToolStripMenuItem, Me.ToolStripMenuItem5, Me.オプションToolStripMenuItem, Me.ToolStripMenuItem6, Me.終了ToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(260, 124)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(286, 130)
         '
         'アプリケーションを開くToolStripMenuItem
         '
         Me.アプリケーションを開くToolStripMenuItem.Name = "アプリケーションを開くToolStripMenuItem"
-        Me.アプリケーションを開くToolStripMenuItem.Size = New System.Drawing.Size(259, 36)
+        Me.アプリケーションを開くToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
         Me.アプリケーションを開くToolStripMenuItem.Text = "アプリケーションを開く"
         '
         'ToolStripMenuItem5
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(256, 6)
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(282, 6)
         '
         'オプションToolStripMenuItem
         '
         Me.オプションToolStripMenuItem.Name = "オプションToolStripMenuItem"
-        Me.オプションToolStripMenuItem.Size = New System.Drawing.Size(259, 36)
+        Me.オプションToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
         Me.オプションToolStripMenuItem.Text = "オプション"
         '
         'ToolStripMenuItem6
         '
         Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(256, 6)
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(282, 6)
         '
         '終了ToolStripMenuItem
         '
         Me.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem"
-        Me.終了ToolStripMenuItem.Size = New System.Drawing.Size(259, 36)
+        Me.終了ToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
         Me.終了ToolStripMenuItem.Text = "終了"
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(945, 514)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label1)
@@ -283,6 +282,7 @@ Partial Class Form2
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Form2"
         Me.Text = "yossiあいさつするプログラム(ウィンドウ2)"
         Me.MenuStrip1.ResumeLayout(False)
@@ -305,7 +305,6 @@ Partial Class Form2
     Friend WithEvents ToolStripMenuItem1 As ToolStripSeparator
     Friend WithEvents 終了XToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ヘルプHToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ヘルプHToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents オンラインヘルプOToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripSeparator
     Friend WithEvents ウェブサイト関係WToolStripMenuItem As ToolStripMenuItem

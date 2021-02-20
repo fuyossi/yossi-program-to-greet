@@ -89,6 +89,14 @@ Public Class Form1
             MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションが32bitか64bitかによる分岐に問題がある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
         End If
         BackgroundWorker1.RunWorkerAsync(100)
+        If My.Settings.darkmode = "True" Then
+            Me.BackColor = Color.Black
+            Label1.BackColor = Color.White
+            Label2.BackColor = Color.White
+            CheckBox1.BackColor = Color.White
+        Else
+            Me.BackColor = Color.White
+        End If
     End Sub
     Private Sub bgWorker_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         ' 別スレッドで実行されるため、このメソッドでは
@@ -112,7 +120,7 @@ Public Class Form1
             MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
         End If
         Do
-            If dtNow.Hour = My.Settings.alarm11 And dtNow.Minute = My.Settings.alarm12 Then
+            If CInt(dtNow.Hour) = My.Settings.alarm11 And CInt(dtNow.Minute) = My.Settings.alarm12 Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath2 + "\icon.ico")
                 NotifyIcon1.Visible = True
                 NotifyIcon1.BalloonTipTitle = "アラーム"
@@ -184,7 +192,7 @@ Public Class Form1
         End If
         'チェックボックスにチェックが入っているときはこんにちはを、入っていないときは時間帯に合わせて「おはようございます」「こんにちは」「こんばんは」を使い分けます
         If CheckBox1.Checked = True Then
-            MsgBox("こんにちは" & vbCrLf & "現在時刻は" + CStr(dtNow) + "時です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
+            MsgBox("こんにちは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
                 NotifyIcon1.Visible = True
@@ -202,7 +210,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 5 And dtNow.Hour < 10 Then
-            get_nowtimetype = "おはようございます"
+            get_nowtimetype = "おはようございます" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -221,7 +229,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 10 And dtNow.Hour < 17 Then
-            get_nowtimetype = "こんにちは"
+            get_nowtimetype = "こんにちは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -240,7 +248,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 17 And dtNow.Hour < 25 Then
-            get_nowtimetype = "こんばんは"
+            get_nowtimetype = "こんばんは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -259,7 +267,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 0 And dtNow.Hour < 5 Then
-            get_nowtimetype = "こんばんは"
+            get_nowtimetype = "こんばんは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -297,7 +305,7 @@ Public Class Form1
         End If
         'チェックボックスにチェックが入っているときはこんにちはを、入っていないときは時間帯に合わせて「おはようございます」「こんにちは」「こんばんは」を使い分けます
         If CheckBox1.Checked = True Then
-            MsgBox("こんにちは", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
+            MsgBox("こんにちは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
                 NotifyIcon1.Visible = True
@@ -315,7 +323,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 5 And dtNow.Hour < 10 Then
-            get_nowtimetype = "おはようございます"
+            get_nowtimetype = "おはようございます" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -334,7 +342,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 10 And dtNow.Hour < 17 Then
-            get_nowtimetype = "こんにちは"
+            get_nowtimetype = "こんにちは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -353,7 +361,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 17 And dtNow.Hour < 25 Then
-            get_nowtimetype = "こんばんは"
+            get_nowtimetype = "こんばんは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -372,7 +380,7 @@ Public Class Form1
                 Application.Exit()
             End If
         ElseIf dtNow.Hour >= 0 And dtNow.Hour < 5 Then
-            get_nowtimetype = "こんばんは"
+            get_nowtimetype = "こんばんは" & vbCrLf & "現在時刻は" + CStr(dtNow.Hour) + "時です。"
             MsgBox(get_nowtimetype, CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             If My.Settings.shownotification = "True" Then
                 NotifyIcon1.Icon = New System.Drawing.Icon(applicationpath + "\icon.ico")
@@ -400,22 +408,8 @@ Public Class Form1
         Application.Exit()
     End Sub
 
-    Private Sub ヘルプHToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ヘルプHToolStripMenuItem1.Click
-        Dim helpfilepath As String
-        helpfilepath = System.Reflection.Assembly.GetExecutingAssembly().Location
-        If Not helpfilepath Is Nothing Then
-            Dim helpfilepathlen As Integer = helpfilepath.Length
-            helpfilepathlen = helpfilepathlen - 21
-            helpfilepath = helpfilepath.Substring(0, helpfilepathlen)
-            helpfilepath = helpfilepath + "\help.chm"
-            Help.ShowHelp(Me, helpfilepath)
-        Else
-            MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
-        End If
-    End Sub
-
     Private Sub オンラインヘルプOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles オンラインヘルプOToolStripMenuItem.Click
-        MsgBox("この機能は将来実装される予定です。大変申し訳ございませんがそれまでお待ちください。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
+        System.Diagnostics.Process.Start("https://tank.sakura.ne.jp/software/help/yossi-program-to-greet/index.html")
     End Sub
 
     Private Sub YossiあいさつするプログラムのウェブサイトEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YossiあいさつするプログラムのウェブサイトEToolStripMenuItem.Click

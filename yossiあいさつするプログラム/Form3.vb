@@ -1,6 +1,7 @@
 ﻿Option Strict On
 Option Explicit On
 Public Class Form3
+    Public pictureBox1_Clicked As Integer
     Private Sub Form3_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Shown
         If IntPtr.Size = 4 Then
             Label4.Text = " (x86)"
@@ -20,6 +21,15 @@ Public Class Form3
             MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題がある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
         End If
         PictureBox1.ImageLocation = picturepath
+        If My.Settings.darkmode = "True" Then
+            Me.BackColor = Color.Black
+            Label1.BackColor = Color.White
+            Label2.BackColor = Color.White
+            Label3.BackColor = Color.White
+            Label4.BackColor = Color.White
+        Else
+            Me.BackColor = Color.White
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -38,6 +48,24 @@ Public Class Form3
             Help.ShowHelp(Me, helpfilepath)
         Else
             MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
+        End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        If pictureBox1_Clicked = 10 Then
+            Dim applicationpath As String
+            applicationpath = System.Reflection.Assembly.GetExecutingAssembly().Location
+            If Not applicationpath Is Nothing Then
+                Dim applicationpathlen As Integer = applicationpath.Length
+                applicationpathlen = applicationpathlen - 21
+                applicationpath = applicationpath.Substring(0, applicationpathlen)
+            Else
+                MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
+            End If
+            Dim p2 As System.Diagnostics.Process =
+        System.Diagnostics.Process.Start(applicationpath + "\index.html")
+        Else
+            pictureBox1_Clicked = pictureBox1_Clicked + 1
         End If
     End Sub
 End Class

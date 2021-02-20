@@ -35,9 +35,10 @@ Partial Class Form3
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(20, 20)
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 23)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 100)
+        Me.PictureBox1.Size = New System.Drawing.Size(118, 114)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -45,28 +46,31 @@ Partial Class Form3
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(233, 50)
+        Me.Label1.Location = New System.Drawing.Point(275, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(308, 21)
+        Me.Label1.Size = New System.Drawing.Size(348, 24)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "yossiあいさつするプログラム ver1.4.0"
+        Me.Label1.Text = "yossiあいさつするプログラム ver2.0.0"
         '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(186, 100)
+        Me.Label2.Location = New System.Drawing.Point(220, 114)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(451, 21)
+        Me.Label2.Size = New System.Drawing.Size(506, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Copyright © 2020-2021 yossi All Rights Reserved."
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(100, 350)
+        Me.Button1.Location = New System.Drawing.Point(118, 400)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 70)
+        Me.Button1.Size = New System.Drawing.Size(236, 80)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
@@ -74,9 +78,10 @@ Partial Class Form3
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(500, 350)
+        Me.Button2.Location = New System.Drawing.Point(591, 400)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(200, 70)
+        Me.Button2.Size = New System.Drawing.Size(236, 80)
         Me.Button2.TabIndex = 4
         Me.Button2.Text = "ヘルプ"
         Me.Button2.UseVisualStyleBackColor = True
@@ -85,9 +90,10 @@ Partial Class Form3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(223, 150)
+        Me.Label3.Location = New System.Drawing.Point(264, 171)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(377, 21)
+        Me.Label3.Size = New System.Drawing.Size(427, 24)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "yossiあいさつするプログラムはfreewareです。"
         '
@@ -95,17 +101,18 @@ Partial Class Form3
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(547, 50)
+        Me.Label4.Location = New System.Drawing.Point(646, 57)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 21)
+        Me.Label4.Size = New System.Drawing.Size(0, 24)
         Me.Label4.TabIndex = 6
         '
         'Form3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(945, 514)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button2)
@@ -114,6 +121,7 @@ Partial Class Form3
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Form3"
         Me.Text = "yossiあいさつするプログラムについて"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

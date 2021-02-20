@@ -137,6 +137,18 @@ Namespace My
                 Me("alarm32") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property darkmode() As String
+            Get
+                Return CType(Me("darkmode"),String)
+            End Get
+            Set
+                Me("darkmode") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
