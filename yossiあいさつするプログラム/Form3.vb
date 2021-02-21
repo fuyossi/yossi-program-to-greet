@@ -51,7 +51,7 @@ Public Class Form3
         End If
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
         If pictureBox1_Clicked = 10 Then
             Dim applicationpath As String
             applicationpath = System.Reflection.Assembly.GetExecutingAssembly().Location

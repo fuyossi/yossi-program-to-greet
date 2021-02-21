@@ -16,14 +16,16 @@ Public Class Form1
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\json\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\json\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
             Dim versionfile As New System.IO.StreamReader(applicationpath + "\version.txt", System.Text.Encoding.Default)
-            Dim versionfile2 As String = sr.ReadToEnd
+            Dim versionfile2 As String = versionfile.ReadToEnd
+            sr.Dispose()
+            versionfile.Dispose()
             If version = versionfile2 Then
 
             Else
@@ -60,14 +62,16 @@ Public Class Form1
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\json\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\json\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
             Dim versionfile As New System.IO.StreamReader(applicationpath + "\version.txt", System.Text.Encoding.Default)
-            Dim versionfile2 As String = sr.ReadToEnd
+            Dim versionfile2 As String = versionfile.ReadToEnd
+            sr.Dispose()
+            versionfile.Dispose()
             If version = versionfile2 Then
 
             Else
@@ -434,14 +438,16 @@ Public Class Form1
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\json\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\json\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
             Dim versionfile As New System.IO.StreamReader(applicationpath + "\version.txt", System.Text.Encoding.Default)
             Dim versionfile2 As String = sr.ReadToEnd
+            sr.Dispose()
+            versionfile.Dispose()
             If version = versionfile2 Then
                 MsgBox("このアプリケーションは最新です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             Else
@@ -467,14 +473,16 @@ Public Class Form1
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\json\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\json\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
             Dim versionfile As New System.IO.StreamReader(applicationpath + "\version.txt", System.Text.Encoding.Default)
             Dim versionfile2 As String = sr.ReadToEnd
+            sr.Dispose()
+            versionfile.Dispose()
             If version = versionfile2 Then
                 MsgBox("このアプリケーションは最新です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             Else
@@ -499,5 +507,19 @@ Public Class Form1
 
     Private Sub オプションOToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles オプションOToolStripMenuItem1.Click
         Form4.ShowDialog(Me)
+    End Sub
+
+    Private Sub アプリケーションを開くToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles アプリケーションを開くToolStripMenuItem.Click
+        Dim fm1 As New Form1
+        fm1.Show()
+    End Sub
+
+    Private Sub オプションToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles オプションToolStripMenuItem.Click
+        Form4.ShowDialog(Me)
+    End Sub
+
+    Private Sub 終了ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 終了ToolStripMenuItem.Click
+        'フォーム2が開いたときフォーム1は、フォーム1が開いたときフォーム2は非表示になるためMe.Closeは使わないこと
+        Application.Exit()
     End Sub
 End Class

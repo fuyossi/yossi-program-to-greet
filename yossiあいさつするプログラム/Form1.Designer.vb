@@ -164,7 +164,7 @@ Partial Class Form1
         '
         Me.オプションOToolStripMenuItem1.Name = "オプションOToolStripMenuItem1"
         Me.オプションOToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F8
-        Me.オプションOToolStripMenuItem1.Size = New System.Drawing.Size(324, 44)
+        Me.オプションOToolStripMenuItem1.Size = New System.Drawing.Size(359, 44)
         Me.オプションOToolStripMenuItem1.Text = "オプション(&O)..."
         '
         'ヘルプHToolStripMenuItem
@@ -241,34 +241,34 @@ Partial Class Form1
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.アプリケーションを開くToolStripMenuItem, Me.ToolStripMenuItem5, Me.オプションToolStripMenuItem, Me.ToolStripMenuItem6, Me.終了ToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(286, 130)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(301, 174)
         '
         'アプリケーションを開くToolStripMenuItem
         '
         Me.アプリケーションを開くToolStripMenuItem.Name = "アプリケーションを開くToolStripMenuItem"
-        Me.アプリケーションを開くToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
+        Me.アプリケーションを開くToolStripMenuItem.Size = New System.Drawing.Size(300, 38)
         Me.アプリケーションを開くToolStripMenuItem.Text = "アプリケーションを開く"
         '
         'ToolStripMenuItem5
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(282, 6)
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(297, 6)
         '
         'オプションToolStripMenuItem
         '
         Me.オプションToolStripMenuItem.Name = "オプションToolStripMenuItem"
-        Me.オプションToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
+        Me.オプションToolStripMenuItem.Size = New System.Drawing.Size(300, 38)
         Me.オプションToolStripMenuItem.Text = "オプション"
         '
         'ToolStripMenuItem6
         '
         Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(282, 6)
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(297, 6)
         '
         '終了ToolStripMenuItem
         '
         Me.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem"
-        Me.終了ToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
+        Me.終了ToolStripMenuItem.Size = New System.Drawing.Size(300, 38)
         Me.終了ToolStripMenuItem.Text = "終了"
         '
         'BackgroundWorker1

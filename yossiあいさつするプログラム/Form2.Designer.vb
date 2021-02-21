@@ -49,8 +49,6 @@ Partial Class Form2
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.アプリケーションを開くToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.オプションToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
         Me.終了ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -235,9 +233,9 @@ Partial Class Form2
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(28, 28)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.アプリケーションを開くToolStripMenuItem, Me.ToolStripMenuItem5, Me.オプションToolStripMenuItem, Me.ToolStripMenuItem6, Me.終了ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.アプリケーションを開くToolStripMenuItem, Me.ToolStripMenuItem5, Me.終了ToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(286, 130)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(286, 86)
         '
         'アプリケーションを開くToolStripMenuItem
         '
@@ -249,17 +247,6 @@ Partial Class Form2
         '
         Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
         Me.ToolStripMenuItem5.Size = New System.Drawing.Size(282, 6)
-        '
-        'オプションToolStripMenuItem
-        '
-        Me.オプションToolStripMenuItem.Name = "オプションToolStripMenuItem"
-        Me.オプションToolStripMenuItem.Size = New System.Drawing.Size(285, 38)
-        Me.オプションToolStripMenuItem.Text = "オプション"
-        '
-        'ToolStripMenuItem6
-        '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(282, 6)
         '
         '終了ToolStripMenuItem
         '
@@ -318,7 +305,5 @@ Partial Class Form2
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents アプリケーションを開くToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem5 As ToolStripSeparator
-    Friend WithEvents オプションToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripSeparator
     Friend WithEvents 終了ToolStripMenuItem As ToolStripMenuItem
 End Class
