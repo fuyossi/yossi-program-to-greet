@@ -92,7 +92,7 @@ Public Class Form2
     End Sub
 
     Private Sub アップデートを確認UToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles アップデートを確認UToolStripMenuItem.Click
-        Dim intptrsize As String, desktopfilepath As String
+        Dim intptrsize As String, desktopfilepath As String, appdatapath As String
         If IntPtr.Size = 4 Then
             intptrsize = "32"
             Dim applicationpath As String
@@ -104,10 +104,14 @@ Public Class Form2
             Else
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
+            appdatapath = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+            Dim filePath As String = appdatapath + "/../Local/yossi program to greet/update.json"
+            Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("utf-8")
+            System.IO.File.WriteAllText(filePath, "", enc)
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", appdatapath + "/../Local/yossi program to greet/update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(appdatapath + "/../Local/yossi program to greet/update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
@@ -115,6 +119,7 @@ Public Class Form2
             Dim versionfile2 As String = sr.ReadToEnd
             sr.Dispose()
             versionfile.Dispose()
+            System.IO.File.Delete(appdatapath + "/../Local/yossi program to greet/update.json")
             If version = versionfile2 Then
                 MsgBox("このアプリケーションは最新です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             Else
@@ -139,10 +144,14 @@ Public Class Form2
             Else
                 MsgBox("技術的な問題が発生しました。" & vbCrLf & "エラー:if分岐の全てに当てはまりません。アプリケーションのパスが格納されている変数がNothingかによる分岐に問題が発生ある可能性があります。", CType(vbOKOnly + vbCritical, MsgBoxStyle), "yossiあいさつするプログラム")
             End If
+            appdatapath = System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+            Dim filePath As String = appdatapath + "/../Local/yossi program to greet/update.json"
+            Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("utf-8")
+            System.IO.File.WriteAllText(filePath, "", enc)
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + "\update.json")
+            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + appdatapath + "/../Local/yossi program to greet/update.json")
             wc.Dispose()
-            Dim sr As New System.IO.StreamReader(applicationpath + "\update.json", System.Text.Encoding.Default)
+            Dim sr As New System.IO.StreamReader(appdatapath + "/../Local/yossi program to greet/update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
             Dim root As Newtonsoft.Json.Linq.JObject = DirectCast(Newtonsoft.Json.JsonConvert.DeserializeObject(jsonText), Newtonsoft.Json.Linq.JObject)
             Dim version As String = root("version").ToString
@@ -150,6 +159,7 @@ Public Class Form2
             Dim versionfile2 As String = sr.ReadToEnd
             sr.Dispose()
             versionfile.Dispose()
+            System.IO.File.Delete(appdatapath + "/../Local/yossi program to greet/update.json")
             If version = versionfile2 Then
                 MsgBox("このアプリケーションは最新です。", CType(vbOKOnly + vbInformation, MsgBoxStyle), "yossiあいさつするプログラム")
             Else

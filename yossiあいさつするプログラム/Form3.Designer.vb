@@ -42,7 +42,7 @@ Partial Class Form3
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(348, 24)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "yossiあいさつするプログラム ver2.1.0"
+        Me.Label1.Text = "yossiあいさつするプログラム ver2.2.0"
         '
         'Label2
         '
