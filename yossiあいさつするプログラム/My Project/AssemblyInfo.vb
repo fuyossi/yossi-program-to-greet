@@ -11,9 +11,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("yossiあいさつするプログラム")>
 <Assembly: AssemblyDescription("コンピューターと気軽にあいさつできるアプリケーションです。")>
-<Assembly: AssemblyCompany("tank-software")>
+<Assembly: AssemblyCompany("yossi.cloud-software")>
 <Assembly: AssemblyProduct("yossiあいさつするプログラム")>
-<Assembly: AssemblyCopyright("Copyright © 2020-2021 yossi All Rights Reserved.")>
+<Assembly: AssemblyCopyright("© 2020 yossi.")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -33,5 +33,5 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")>
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("2.2.0.0")>
+<Assembly: AssemblyFileVersion("2.3.0.0")>
 <Assembly: NeutralResourcesLanguage("")>

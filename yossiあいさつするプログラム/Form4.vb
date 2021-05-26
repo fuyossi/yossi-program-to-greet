@@ -20,17 +20,17 @@ Public Class Form4
         NumericUpDown6.Value = My.Settings.alarm32
         If My.Settings.darkmode = "True" Then
             Me.BackColor = Color.Black
-            Label1.BackColor = Color.White
-            Label2.BackColor = Color.White
-            Label3.BackColor = Color.White
-            Label4.BackColor = Color.White
-            Label5.BackColor = Color.White
-            Label6.BackColor = Color.White
-            Label7.BackColor = Color.White
-            Label8.BackColor = Color.White
-            Label9.BackColor = Color.White
-            CheckBox1.BackColor = Color.White
-            CheckBox2.BackColor = Color.White
+            Label1.ForeColor = Color.White
+            Label2.ForeColor = Color.White
+            Label3.ForeColor = Color.White
+            Label4.ForeColor = Color.White
+            Label5.ForeColor = Color.White
+            Label6.ForeColor = Color.White
+            Label7.ForeColor = Color.White
+            Label8.ForeColor = Color.White
+            Label9.ForeColor = Color.White
+            CheckBox1.ForeColor = Color.White
+            CheckBox2.ForeColor = Color.White
         Else
             Me.BackColor = Color.White
         End If

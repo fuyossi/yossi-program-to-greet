@@ -4,7 +4,7 @@ Public Class Form2
     Private Sub Form1_Shown(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Shown
         If My.Settings.darkmode = "True" Then
             Me.BackColor = Color.Black
-            Label1.BackColor = Color.White
+            Label1.ForeColor = Color.White
         Else
             Me.BackColor = Color.White
         End If
@@ -80,15 +80,15 @@ Public Class Form2
     End Sub
 
     Private Sub オンラインヘルプOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles オンラインヘルプOToolStripMenuItem.Click
-        System.Diagnostics.Process.Start("https://tank.sakura.ne.jp/software/help/yossi-program-to-greet/index.html")
+        System.Diagnostics.Process.Start("https://www.yossi.cloud/software/yossi-program-to-greet/help/")
     End Sub
 
     Private Sub YossiあいさつするプログラムのウェブサイトWToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles YossiあいさつするプログラムのウェブサイトWToolStripMenuItem.Click
-        System.Diagnostics.Process.Start("https://tank.sakura.ne.jp/software/yossi-program-to-greet.html")
+        System.Diagnostics.Process.Start("https://www.yossi.cloud/software/yossi-program-to-greet/")
     End Sub
 
     Private Sub TankHToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TankHToolStripMenuItem.Click
-        System.Diagnostics.Process.Start("https://tank.sakura.ne.jp/")
+        System.Diagnostics.Process.Start("https://www.yossi.cloud/")
     End Sub
 
     Private Sub アップデートを確認UToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles アップデートを確認UToolStripMenuItem.Click
@@ -109,7 +109,7 @@ Public Class Form2
             Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("utf-8")
             System.IO.File.WriteAllText(filePath, "", enc)
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", appdatapath + "/../Local/yossi program to greet/update.json")
+            wc.DownloadFile("https://www.yossi.cloud/software/yossi-program-to-greet/json/update.json", appdatapath + "/../Local/yossi program to greet/update.json")
             wc.Dispose()
             Dim sr As New System.IO.StreamReader(appdatapath + "/../Local/yossi program to greet/update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
@@ -126,7 +126,7 @@ Public Class Form2
                 desktopfilepath = System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
                 desktopfilepath = desktopfilepath + "\"
                 My.Computer.Network.DownloadFile(
-        "https://tank.sakura.ne.jp/software/libs/yossi-program-to-greet/" + version + "/yossi-program-to-greet_ver" + version + "_" + intptrsize + "_setup.exe", desktopfilepath + "yossi-program-to-greet_" + version + "_" + intptrsize + "_setup.exe",
+        "https://www.yossi.cloud/software/yossi-program-to-greet/" + version + "/yossi-program-to-greet_ver" + version + "_" + intptrsize + "_setup.exe", desktopfilepath + "yossi-program-to-greet_" + version + "_" + intptrsize + "_setup.exe",
         "", "",
         True, 60000, True, FileIO.UICancelOption.DoNothing)
                 Dim p2 As System.Diagnostics.Process =
@@ -149,7 +149,7 @@ Public Class Form2
             Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("utf-8")
             System.IO.File.WriteAllText(filePath, "", enc)
             Dim wc As New System.Net.WebClient()
-            wc.DownloadFile("https://tank.sakura.ne.jp/software/update.json", applicationpath + appdatapath + "/../Local/yossi program to greet/update.json")
+            wc.DownloadFile("https://www.yossi.cloud/software/yossi-program-to-greet/json/update.json", applicationpath + appdatapath + "/../Local/yossi program to greet/update.json")
             wc.Dispose()
             Dim sr As New System.IO.StreamReader(appdatapath + "/../Local/yossi program to greet/update.json", System.Text.Encoding.Default)
             Dim jsonText As String = sr.ReadToEnd
@@ -166,7 +166,7 @@ Public Class Form2
                 desktopfilepath = System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
                 desktopfilepath = desktopfilepath + "\"
                 My.Computer.Network.DownloadFile(
-        "https://tank.sakura.ne.jp/software/libs/yossi-program-to-greet/" + version + "/yossi-program-to-greet_ver" + version + "_" + intptrsize + "_setup.exe", desktopfilepath + "yossi-program-to-greet_" + version + "_" + intptrsize + "_setup.exe",
+        "https://www.yossi.cloud/software/libs/yossi-program-to-greet/" + version + "/yossi-program-to-greet_ver" + version + "_" + intptrsize + "_setup.exe", desktopfilepath + "yossi-program-to-greet_" + version + "_" + intptrsize + "_setup.exe",
         "", "",
         True, 60000, True, FileIO.UICancelOption.DoNothing)
                 Dim p3 As System.Diagnostics.Process =

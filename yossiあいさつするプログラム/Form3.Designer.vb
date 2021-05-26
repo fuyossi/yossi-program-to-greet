@@ -29,8 +29,6 @@ Partial Class Form3
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -42,18 +40,18 @@ Partial Class Form3
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(348, 24)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "yossiあいさつするプログラム ver2.2.0"
+        Me.Label1.Text = "yossiあいさつするプログラム ver2.3.0"
         '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(220, 114)
+        Me.Label2.Location = New System.Drawing.Point(414, 114)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(506, 24)
+        Me.Label2.Size = New System.Drawing.Size(143, 24)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Copyright © 2020-2021 yossi All Rights Reserved."
+        Me.Label2.Text = "© 2020 yossi."
         '
         'Button1
         '
@@ -81,12 +79,12 @@ Partial Class Form3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(264, 171)
+        Me.Label3.Location = New System.Drawing.Point(292, 171)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(427, 24)
+        Me.Label3.Size = New System.Drawing.Size(386, 24)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "yossiあいさつするプログラムはfreewareです。"
+        Me.Label3.Text = "yossiあいさつするプログラムはOSSです。"
         '
         'Label4
         '
@@ -98,21 +96,12 @@ Partial Class Form3
         Me.Label4.Size = New System.Drawing.Size(0, 24)
         Me.Label4.TabIndex = 6
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 50)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 100)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(945, 514)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button2)
@@ -123,7 +112,6 @@ Partial Class Form3
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "Form3"
         Me.Text = "yossiあいさつするプログラムについて"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -134,5 +122,4 @@ Partial Class Form3
     Friend WithEvents Button2 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox1 As PictureBox
 End Class

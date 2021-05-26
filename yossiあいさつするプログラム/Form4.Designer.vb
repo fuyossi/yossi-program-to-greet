@@ -233,6 +233,7 @@ Partial Class Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(563, 727)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label9)
